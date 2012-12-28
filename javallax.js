@@ -441,8 +441,8 @@
 		overlay.id = "javallax-overlay";
 		overlay.style.backgroundColor = "#000";
 		overlay.style.opacity = 0.7;
-		overlay.style.position = "absolute";
-		overlay.style.top = docElem.scrollTop + "px";
+		overlay.style.position = "fixed";
+		overlay.style.top = "0px";
 		overlay.style.left = "0px";
 		overlay.style.zIndex = "9998";
 		overlay.onclick = function () {
@@ -457,12 +457,12 @@
 		var about = document.createElement("div");
 		about.id = "javallax-about";
 		about.style.backgroundColor = "#fff";
-		about.style.position = "absolute";
+		about.style.position = "fixed";
 		about.style.width = "360px";
 		about.style.height = "120px";
 		about.style.padding = "15px";
 		about.style.zIndex = "9999";
-		about.style.top = (parseInt(docElem.scrollTop) + parseInt(docElem.clientHeight) / 2 - 100) + "px";		
+		about.style.top = (parseInt(docElem.clientHeight) / 2 - 100) + "px";		
 		about.style.left = (parseInt(docElem.clientWidth) / 2 - 180) + "px";	
 		about.style.textAlign = "center";
 		about.style.fontFamily = "Verdana";
