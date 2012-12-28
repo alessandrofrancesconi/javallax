@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+	<title>Some Javallax examples</title>
+	<script type="text/javascript" src="../javallax.js"></script>
+	
+	<style>
+		body {
+			background-color: #276fa3;
+			font-size: 15px;
+			font-family: Verdana;		
+			text-align: center;
+			color: #ebf4fa;
+		}
+		
+		a {
+		color: #ebf4fa;
+		text-decoration: underline;
+		}
+		
+		.javallax {
+			margin: 0px auto;
+			border: 2px solid #000;
+			background-color: #000
+		}
+		
+		#footer {
+			font-size: 12px;
+			text-align: left;
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		
+	</style>
+</head>
+
+<body bgcolor="white">
+	
+	<h1>This is a Javallax sample page!</h1>
+	<h2>Try it and download from <a href="http://www.alessandrofrancesconi.it/projects/javallax/javallax.zip">here</a></h2>
+	
+	<img class="" src="land1_O.jpg" width = "320px" height = "158px" /> <span style="font-size: 50px">+</span>
+	<img class="" src="land1_D.jpg" width = "320px" height = "158px" />
+	<div id="3d-test1" class="javallax">
+		<img class="javallax-original" src="land1_O.jpg" />
+		<img class="javallax-depthmap" src="land1_D.jpg" />
+	</div>
+	<br /><br />
+	<img class="" src="river_O.jpg" width = "220px" height = "333px" /> <span style="font-size: 50px">+</span>
+	<img class="" src="river_D.jpg" width = "220px" height = "333px" />
+	<div id="3d-test1" class="javallax">
+		<img class="javallax-original" src="river_O.jpg" />
+		<img class="javallax-depthmap" src="river_D.jpg" />
+	</div>
+	<br /><br />
+	<img class="" src="chess_O.jpg" width = "300px" height = "300px" /> <span style="font-size: 50px">+</span> 
+	<img class="" src="chess_D.jpg" width = "300px" height = "300px" />
+	<div id="3d-test2" class="javallax">
+		<img class="javallax-original" src="chess_O.jpg" />
+		<img class="javallax-depthmap" src="chess_D.jpg" />
+	</div>
+	<br /><br />
+	<img class="" src="coke_O.jpg" width = "300px" height = "300px" /> <span style="font-size: 50px">+</span> 
+	<img class="" src="coke_D.jpg" width = "300px" height = "300px" />
+	<div id="3d-test2" class="javallax">
+		<img class="javallax-original" src="coke_O.jpg" />
+		<img class="javallax-depthmap" src="coke_D.jpg" />
+	</div>
+	
+	<br /><br />
+	<img class="" src="penguin_O.png" width = "320px" height = "178px" /> <span style="font-size: 50px">+</span> 
+	<img class="" src="penguin_D.png" width = "320px" height = "178px" />
+	<div id="3d-test2" class="javallax">
+		<img class="javallax-original" src="penguin_O.png" />
+		<img class="javallax-depthmap" src="penguin_D.png" />
+	</div>
+	
+	<!--<input id="depth" type="text"/>-->
+	
+	<div id="footer">
+		Javallax is created by <a href="http://www.alessandrofrancesconi.it">Alessandro Francesconi</a>
+	</div>
+</body>
+
+</html>

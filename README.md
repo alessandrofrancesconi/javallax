@@ -1,21 +1,23 @@
 Javallax
 ========
 
-Javallax is a Javascript library that enables 3D/parallax effect on web images.
+Javallax is a Javascript library that enables a 3D/parallax effect on web images.
 
 In plain words, it can simulate the effect as you move the mouse over an image like this 
 https://github.com/javallax_can_do_that (yeah, the GitHub's 404 error effect) without creating 
-layers and without needing to know HTML5 stuffs.
+layers and without needing to know HTML5 stuff.
 
 Demo here: http://www.alessandrofrancesconi.it/projects/javallax
 
 Requirements and usage
 ----------------------
 
-The two things you need are __an image and it's relative [depth map](http://goo.gl/aBwCE)__. 
+Javallax works on browsers that supports "canvas" element: IE9+, Firefox 15+, Chrome 22+, Safari 5.1+, Opera 12.1+, Safari 3.2+
 
-Include Javallax.js in your web page, then add an element with class `javallax` where you want to place
-the image. Then, insert inside this element the original image with class `javallax-original` and the 
+The two things you need are __an image and its relative [depth map](http://goo.gl/aBwCE)__. 
+
+Include `javallax.js` in your web page, then add an element with class `javallax` where you want to put
+the image. Insert inside this element the original image with class `javallax-original` and the 
 depth map with class `javallax-depthmap`.
 
 For example:
@@ -35,7 +37,8 @@ For example:
 </html>
 ```
 
-Further improvements
+Future improvements
 --------------------
 
-For the next major versions, I'm planning to extend the support to [stereo images](http://goo.gl/tyiun).
+* Extend the support to [stereo images](http://goo.gl/tyiun)
+* Optimize code and loading speed
