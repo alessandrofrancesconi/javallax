@@ -90,6 +90,8 @@
 				var link = document.createElement("a");
 				link.target = "_blank";
 				link.href = "http://www.updateyourbrowser.net";
+				link.style.color = "#000";
+				link.style.textDecoration = "underline";
 				link.appendChild(document.createTextNode("update it!")); 
 				
 				notSupported.appendChild(txt); 
@@ -502,6 +504,8 @@
 		var link = document.createElement("a");
 		link.target = "_blank";
 		link.href = "http://www.alessandrofrancesconi.it/projects/javallax";
+		link.style.color = "#000";
+		link.style.textDecoration = "underline";
 		link.appendChild(document.createTextNode("Alessandro Francesconi")); 		
 		author.appendChild(link);
 		
