@@ -53,7 +53,7 @@
 				imageData[i]["MODE"] = ModeEnum.ORIG_DEPTH;
 			}
 			else if ((typeof originalLeft == "object") && (typeof originalRight == "object")) {
-				// there is a stereo pair image pair
+				// there is a stereo image pair
 				imageData[i]["MODE"] = ModeEnum.LR;
 				continue; // not yet supported!
 			}
