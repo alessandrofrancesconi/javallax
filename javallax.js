@@ -23,7 +23,7 @@
 
 
 (function() {
-	var JAVALLAX_VERSION = "0.1";
+	var JAVALLAX_VERSION = "0.2";
 	
 	var imageData = []; // will contain all the informations about javallax-enabled images in the page
 	
@@ -37,7 +37,7 @@
 	};
 	
 	addLoadEvent(function() {
-		// at page load, get all the elements with id "javallax" and iterate into them
+		// at page load, get all the elements with class "javallax" and iterate into them
 		var sourceDivs = getElementsByClass("javallax");
 		for (var i = 0; i < sourceDivs.length; i++) {
 			imageData[i] = [];
@@ -337,10 +337,11 @@
 						var copy = 0;
 						var coveredPixel = getPixelIndex ((x + copy * copyDirection), y, totalWidth);
 						
-						while (copy < COPY_X_COUNT) {
+						while (copy < COPY_X_COUNT && coveredPixel >= 0 && coveredPixel < (y * totalWidth + totalWidth) * 4) {
+							var coveredLayerIndex = getLayerIndex(depthData, coveredPixel);  
 							if (
-							(copyDirection == 1 && getLayerIndex(depthData, coveredPixel) >= layerIndex) ||
-							(copyDirection == -1 && getLayerIndex(depthData, coveredPixel) > layerIndex)
+							(copyDirection == 1 && coveredLayerIndex >= layerIndex) ||
+							(copyDirection == -1 && coveredLayerIndex > layerIndex)
 							) {
 								layersData[coveredLayer].data[coveredPixel] = layersData[coveredLayer].data[pixToCopy];
 								layersData[coveredLayer].data[coveredPixel + 1] = layersData[coveredLayer].data[pixToCopy + 1];
@@ -369,10 +370,11 @@
 						var copy = 0;
 						var coveredPixel = getPixelIndex (x, (y + (copy * copyDirection)), totalWidth);
 						
-						while (copy < COPY_Y_COUNT) {
+						while (copy < COPY_Y_COUNT && coveredPixel >= 0 && coveredPixel < (totalHeight * totalWidth + x) * 4) {
+							var coveredLayerIndex = getLayerIndex(depthData, coveredPixel);  
 							if (
-							(copyDirection == 1 && getLayerIndex(depthData, coveredPixel) >= layerIndex) ||
-							(copyDirection == -1 && getLayerIndex(depthData, coveredPixel) > layerIndex)
+							(copyDirection == 1 && coveredLayerIndex >= layerIndex) ||
+							(copyDirection == -1 && coveredLayerIndex > layerIndex)
 							) {
 								layersData[coveredLayer].data[coveredPixel] = layersData[coveredLayer].data[pixToCopy];
 								layersData[coveredLayer].data[coveredPixel + 1] = layersData[coveredLayer].data[pixToCopy + 1];
